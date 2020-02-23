@@ -1,0 +1,9 @@
+<mat-toolbar color="custom">
+  <div class="logo">{{ title.toUpperCase() }}</div>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+
+  <span>Вы вошли, как {{ user.displayName }}</span>
+  <button mat-button class="button-logout" (click)="logout()">Выйти</button>
+</mat-toolbar>

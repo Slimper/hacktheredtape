@@ -1,0 +1,10 @@
+<mat-card class="form-list-element-card">
+  <mat-card-header>
+    <mat-card-title>{{ form.name }}</mat-card-title>
+    <mat-card-subtitle>{{ owner?.name }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ form.description }}</p>
+    <button mat-button [routerLink]="[form.id]">Заполнить</button>
+  </mat-card-content>
+</mat-card>

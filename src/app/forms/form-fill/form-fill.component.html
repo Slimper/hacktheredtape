@@ -1,0 +1,28 @@
+<mat-card class="form-fill-card" *ngIf="form">
+  <mat-card-header>
+    <mat-card-title>{{ form.name }}</mat-card-title>
+    <mat-card-subtitle>{{ owner?.name }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ form.description }}</p>
+
+    <div class="form">
+      <form [formGroup]="formGroup">
+        <div *ngFor="let question of form.questions; let i = index;">
+          <div [ngSwitch]="question.type">
+            <div *ngSwitchCase="QuestionTypes.string">
+              <mat-form-field>
+                <mat-label>{{ question.question }}</mat-label>
+                <input matInput [placeholder]="question.placeholder || ''" [formControlName]="i">
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button (click)="save()">Сохранить</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "hacktheredtape",
+      "public": "dist/hacktheredtape",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

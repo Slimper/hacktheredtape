@@ -1,0 +1,8 @@
+<div class="row">
+  <ng-container *ngFor="let form of formsList">
+    <app-form-list-element class="col-md-4 col-sm-2 col-xs-1"
+                           [form]="form"
+                           [owner]="getOwner(form)"></app-form-list-element>
+  </ng-container>
+
+</div>
